@@ -17,9 +17,9 @@ class ZipCodesController extends Controller
     public function getZipCode($zipCode)
     {
         try {
-
             return ZipCode::where('zip_code', $zipCode)
-                ->first(['id', 'zip_code', 'locality'])->load(['federalEntity', 'settlements.settlementType', 'municipality']);
+                ->with(['federalEntity', 'settlements.settlementType', 'municipality'])
+                ->first(['id', 'zip_code', 'locality']);
         } catch (\Throwable $th) {
             return response('Not found zip code', 404);
         }
