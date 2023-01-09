@@ -26,6 +26,7 @@ class DatabaseSeeder extends Seeder
             Aguascalientes_ZipCode::class,
             Baja_California_Sur_ZipCode::class,
             Baja_California_ZipCode::class,
+            Campeche_ZipCode::class,
             Chiapas_ZipCode::class,
             Chihuahua_ZipCode::class,
             Coahuila_de_Zaragoza_ZipCode::class,
