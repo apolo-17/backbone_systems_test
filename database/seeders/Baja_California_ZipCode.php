@@ -14,6 +14,6 @@ class Baja_California_ZipCode extends Seeder
      */
     public function run()
     {
-        (new \App\Http\Service\StoreZipCodes())->register('CPdescarga.xlsx - Baja_Califronia.csv');
+        (new \App\Http\Service\StoreZipCodes())->register('CPdescarga.xlsx - Baja_California.csv');
     }
 }
