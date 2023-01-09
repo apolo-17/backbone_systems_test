@@ -17,9 +17,9 @@ class ZipCodesController extends Controller
     public function getZipCode($zipCode)
     {
         $zipCode = strlen($zipCode) <= 4 ? '0' . $zipCode : $zipCode;
-        $tmp = ZipCode::with(['federalEntity', 'settlements.settlementType', 'municipality'])
+        return ZipCode::with(['federalEntity', 'settlements.settlementType', 'municipality'])
             ->where('zip_code', $zipCode)
-            ->firstOrFail(['id', 'zip_code', 'locality']);
-        return response()->json($tmp->toArray());
+            ->firstOrFail(['id', 'zip_code', 'locality'])->toArray();
+        //return response()->json($tmp->toArray());
     }
 }
