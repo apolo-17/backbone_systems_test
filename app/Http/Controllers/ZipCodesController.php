@@ -17,11 +17,11 @@ class ZipCodesController extends Controller
     public function getZipCode($zipCode)
     {
         $zipCode = strlen($zipCode) <= 4 ? '0' . $zipCode : $zipCode;
-        /* $tmp = ZipCode::with(['federalEntity', 'settlements.settlementType', 'municipality'])
+        return ZipCode::with(['federalEntity', 'settlements.settlementType', 'municipality'])
             ->where('zip_code', $zipCode)
-            ->firstOrFail(['id', 'zip_code', 'locality']); */
-        return response()->json(ZipCode::with(['federalEntity', 'settlements.settlementType', 'municipality'])
+            ->firstOrFail(['id', 'zip_code', 'locality']);
+        /* return response()->json(ZipCode::with(['federalEntity', 'settlements.settlementType', 'municipality'])
             ->where('zip_code', $zipCode)
-            ->firstOrFail(['id', 'zip_code', 'locality'])->toArray());
+            ->firstOrFail(['id', 'zip_code', 'locality'])->toArray()); */
     }
 }
