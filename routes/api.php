@@ -19,5 +19,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('/upload-zip-codes', [ZipCodesController::class, 'uploadZipCodes']);
 Route::get('/zip-codes/{zipCode}', [ZipCodesController::class, 'getZipCode']);
