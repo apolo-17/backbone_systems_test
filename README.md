@@ -5,4 +5,4 @@ Analice la api que dieron de ejemplo para observar que hace en diferentes situac
 
 Llegue a la conclusion de que aparte de tener una buena red tambien es necesario una buena logica para lograr reducir el teimpo de respuesta, revise el json de respuesta para entender las relaciones que exisen y las tablas de bd, entonces empece a maquetar la bd y agregar las relaciones.
 
-Una vez que arme las relaciones en la bd y subi la informacion me enfoque en el query, a medir el tiempo que tarda en la consulta y reducirlo mejorando el query, pase de 800ms a 20ms en promedio.
+Una vez que arme las relaciones en la bd y subi la informacion me enfoque en el query, a medir el tiempo que tarda en la consulta y reducirlo mejorando el query, pase de 800ms a 200ms en promedio.
