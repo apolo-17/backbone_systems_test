@@ -26,7 +26,7 @@ class StoreZipCodes
 
                 $zip_code = ZipCode::firstOrCreate(['zip_code' => $array_csv[$i][0]], ['locality' => $this->changeFormatName(strtoupper($array_csv[$i][5]))]);
 
-                $settlement_type = SettlementType::firstOrCreate(['name' => $this->changeFormatName(ucfirst($array_csv[$i][2]))]);
+                $settlement_type = SettlementType::firstOrCreate(['name' => ucwords(strtolower($array_csv[$i][2]))]);
 
                 Settlement::create([
                     'key' => intval($array_csv[$i][12]),
