@@ -20,13 +20,13 @@ class StoreZipCodes
 
             $lines = file($path . '/' . $file);
             $utf8_lines_decode = array_map('utf8_encode', $lines);
-            $array_csv = array_map('str_getcsv', $utf8_lines_decode);
+            $array_csv = array_map('str_getcsv', $lines);
 
             for ($i = 1; $i < sizeof($array_csv); $i++) {
 
                 $zip_code = ZipCode::firstOrCreate(['zip_code' => $array_csv[$i][0]], ['locality' => strtoupper($array_csv[$i][5])]);
 
-                $settlement_type = SettlementType::firstOrCreate(['name' => strtoupper($array_csv[$i][2])]);
+                $settlement_type = SettlementType::firstOrCreate(['name' => ucfirst($array_csv[$i][2])]);
 
                 Settlement::create([
                     'key' => intval($array_csv[$i][12]),
