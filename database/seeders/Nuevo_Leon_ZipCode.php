@@ -14,6 +14,6 @@ class Nuevo_Leon_ZipCode extends Seeder
      */
     public function run()
     {
-        (new \App\Http\Service\StoreZipCodes())->register('CPdescarga.xlsx - Nuevo_Leon.csv');
+        (new \App\Http\Service\StoreZipCodes())->register('CPdescarga.xlsx - Nuevo_León.csv');
     }
 }
