@@ -20,8 +20,5 @@ class ZipCodesController extends Controller
         return ZipCode::with(['federalEntity', 'settlements.settlementType', 'municipality'])
             ->where('zip_code', $zipCode)
             ->firstOrFail(['id', 'zip_code', 'locality']);
-        /* return response()->json(ZipCode::with(['federalEntity', 'settlements.settlementType', 'municipality'])
-            ->where('zip_code', $zipCode)
-            ->firstOrFail(['id', 'zip_code', 'locality'])->toArray()); */
     }
 }
