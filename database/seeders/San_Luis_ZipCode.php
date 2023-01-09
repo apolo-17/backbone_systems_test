@@ -14,6 +14,6 @@ class San_Luis_ZipCode extends Seeder
      */
     public function run()
     {
-        (new \App\Http\Service\StoreZipCodes())->register('CPdescarga.xlsx - San_Luis.csv');
+        (new \App\Http\Service\StoreZipCodes())->register('CPdescarga.xlsx - San_Luis_Potosí.csv');
     }
 }
